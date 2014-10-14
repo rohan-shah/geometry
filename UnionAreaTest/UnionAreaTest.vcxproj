@@ -54,33 +54,33 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\CGALLink.props" />
-    <Import Project="..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\CGALLink.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\BoostLinkDebug64.props" />
-    <Import Project="..\..\CGALLink.props" />
-    <Import Project="..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\BoostLinkDebug64.props" />
+    <Import Project="..\..\..\CGALLink.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\CGALLink.props" />
-    <Import Project="..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\CGALLink.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\BoostLinkRelease64.props" />
-    <Import Project="..\..\CGALLink.props" />
-    <Import Project="..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\BoostLinkRelease64.props" />
+    <Import Project="..\..\..\CGALLink.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />

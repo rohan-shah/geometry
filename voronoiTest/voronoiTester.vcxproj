@@ -64,35 +64,35 @@
   <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\CGALInclude.props" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\CGALLink.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\CGALLink.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\CGALInclude.props" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\BoostLinkRelease64.props" />
-    <Import Project="..\..\CGALLink.props" />
-    <Import Project="..\..\QTRelease.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\BoostLinkRelease64.props" />
+    <Import Project="..\..\..\CGALLink.props" />
+    <Import Project="..\..\..\QTRelease.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\CGALInclude.props" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\CGALLink.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\CGALLink.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
-    <Import Project="..\..\BoostInclude.props" />
-    <Import Project="..\..\CGALInclude.props" />
-    <Import Project="..\..\cml.props" />
-    <Import Project="..\..\BoostLinkDebug64.props" />
-    <Import Project="..\..\CGALLink.props" />
-    <Import Project="..\..\QTDebug.props" />
+    <Import Project="..\..\..\BoostInclude.props" />
+    <Import Project="..\..\..\CGALInclude.props" />
+    <Import Project="..\..\..\cml.props" />
+    <Import Project="..\..\..\BoostLinkDebug64.props" />
+    <Import Project="..\..\..\CGALLink.props" />
+    <Import Project="..\..\..\QTDebug.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -119,7 +119,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..;"..\OverdispersedPoissonOrdered";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtWidgets";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtGui";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtANGLE";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtCore";"release";..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;"$(QTDIR)\include";"$(QTDIR)\include\QtWidgets";"$(QTDIR)\include\QtGui";"$(QTDIR)\include\QtANGLE";"$(QTDIR)\include\QtCore";"release";$(QTDIR_SOURCE)\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -159,7 +159,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..;..\OverdispersedPoissonOrdered;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -200,7 +200,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..;"..\OverdispersedPoissonOrdered";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtWidgets";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtGui";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtANGLE";"..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtCore";"debug";..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;$(QTDIR)\include";"$(QTDIR)\include\QtWidgets";"$(QTDIR)\include\QtGui";"$(QTDIR)\include\QtANGLE";"$(QTDIR)\include\QtCore";"debug";$(QTDIR_SOURCE)\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -240,7 +240,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..;..\OverdispersedPoissonOrdered;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -293,12 +293,12 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="voronoiViewer.h">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE -DNDEBUG  "-I.\.." "-I.\..\OverdispersedPoissonOrdered" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtWidgets" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtGui" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtANGLE" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtCore" "-I.\release" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\mkspecs\win32-msvc2012" "-ID:\Programming\cml-1_0_2" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_MBCS  "-I.\.." "-I.\..\OverdispersedPoissonOrdered" "-I$(QTDIR_SOURCE)\include" "-I$(QTDIR_SOURCE)\include\QtWidgets" "-I$(QTDIR_SOURCE)\include\QtGui" "-I$(QTDIR_SOURCE)\include\QtANGLE" "-I$(QTDIR_SOURCE)\include\QtCore" "-I.\release" "-I$(QTDIR_SOURCE)\mkspecs\win32-msvc2012" "-ID:\Programming\cml-1_0_2" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE -DNDEBUG  "-I.\.." "-I.\$(QTDIR)\include" "-I.\$(QTDIR)\include\QtWidgets" "-I.\$(QTDIR)\include\QtGui" "-I.\$(QTDIR)\include\QtANGLE" "-I.\$(QTDIR)\include\QtCore" "-I.\release" "-I.\$(QTDIR_SOURCE)\mkspecs\win32-msvc2012" "-ID:\Programming\cml-1_0_2" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_MBCS  "-I.\.." "-I$(QTDIR_SOURCE)\include" "-I$(QTDIR_SOURCE)\include\QtWidgets" "-I$(QTDIR_SOURCE)\include\QtGui" "-I$(QTDIR_SOURCE)\include\QtANGLE" "-I$(QTDIR_SOURCE)\include\QtCore" "-I.\release" "-I$(QTDIR_SOURCE)\mkspecs\win32-msvc2012" "-ID:\Programming\cml-1_0_2" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing voronoiViewer.h...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing voronoiViewer.h...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE  "-I.\.." "-I.\..\OverdispersedPoissonOrdered" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtWidgets" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtGui" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtANGLE" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\include\QtCore" "-I.\debug" "-I.\..\..\..\..\..\Programming\Qt\Qt5.1.1\5.1.1\msvc2012_64\mkspecs\win32-msvc2012" "-ID:\Programming\cml-1_0_2" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_MBCS  "-I.\.." "-I.\..\OverdispersedPoissonOrdered" "-I$(QTDIR_SOURCE)\include" "-I$(QTDIR_SOURCE)\include\QtWidgets" "-I$(QTDIR_SOURCE)\include\QtGui" "-I$(QTDIR_SOURCE)\include\QtANGLE" "-I$(QTDIR_SOURCE)\include\QtCore" "-I.\debug" "-I$(QTDIR_SOURCE)\mkspecs\win32-msvc2012" "-I$(CML_DIR)" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE  "-I.\.." "-I.\$(QTDIR)\include" "-I.\$(QTDIR)\include\QtWidgets" "-I.\$(QTDIR)\include\QtGui" "-I.\$(QTDIR)\include\QtANGLE" "-I.\$(QTDIR)\include\QtCore" "-I.\debug" "-I.\$(QTDIR_SOURCE)\mkspecs\win32-msvc2012" "-ID:\Programming\cml-1_0_2" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DBOOST_AUTO_LINK_TAGGED -DBOOST_ALL_DYN_LINK -D_WINDOWS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_ES_2 -DQT_OPENGL_ES_2_ANGLE -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_MBCS  "-I.\.." "-I$(QTDIR_SOURCE)\include" "-I$(QTDIR_SOURCE)\include\QtWidgets" "-I$(QTDIR_SOURCE)\include\QtGui" "-I$(QTDIR_SOURCE)\include\QtANGLE" "-I$(QTDIR_SOURCE)\include\QtCore" "-I.\debug" "-I$(QTDIR_SOURCE)\mkspecs\win32-msvc2012" "-I$(CML_DIR)" "-I$(CGAL_DIR)\include" "-I$(CGAL_DIR)\auxiliary\gmp\include" "-I$(BOOST_HOME)\."</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing voronoiViewer.h...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing voronoiViewer.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
