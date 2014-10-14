@@ -1,0 +1,14 @@
+Geometry.sdf
+x64/
+Geometry.v11.suo
+IntersectionTest/x64
+IntersectionTest/GeneratedFiles
+ConvexBoundaryTester/GeneratedFiles
+ConvexBoundaryTester/Win32
+intersectionAreaTester/GeneratedFiles
+intersectionAreaTester2/GeneratedFiles
+OverdispersedPoissonOrdered/x64
+OverdispersedPoissonOrdered/Debug
+Geometry.opensdf
+voronoiTest/GeneratedFiles/Release
+Geometry.v12.suo
