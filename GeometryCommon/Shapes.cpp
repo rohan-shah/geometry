@@ -17,11 +17,6 @@ namespace geometry
 		cml::vector2f thisPerp(this->unitDirection[1], -this->unitDirection[0]);
 		float otherParam = cml::dot(-(this->pos - other.pos), thisPerp) / -cml::dot(other.unitDirection, thisPerp);
 		cml::vector2f otherPos = other.pos + otherParam * other.unitDirection;
-#ifndef NDEBUG
-		cml::vector2f otherPerp(other.unitDirection[1], -other.unitDirection[0]);
-		float thisParam = cml::dot(-(other.pos - this->pos), otherPerp) / -cml::dot(this->unitDirection, otherPerp);
-		cml::vector2f thisPos = pos + thisParam * this->unitDirection;
-#endif
 		return otherPos;
 	}
 	float Line::getRadius() const
@@ -47,7 +42,7 @@ namespace geometry
 		return (point == other.point) && ((objects.first == other.objects.first && objects.second == other.objects.second) || (objects.first == other.objects.second && objects.second == other.objects.first));
 	}
 	intersectionDescription::intersectionDescription(cml::vector2f point, intersectingObjects objects)
-		:point(point), objects(objects)
+		:objects(objects), point(point)
 	{}
 	std::ostream& operator<<(std::ostream& os, const Line& line)
 	{

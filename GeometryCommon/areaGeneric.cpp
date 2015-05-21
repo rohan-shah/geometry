@@ -85,8 +85,7 @@ namespace geometry
 		if(points.size() == 0) return 0;
 		float polygonArea = 0;
 		float arcArea = 0;
-		bool isPair = points.size() == 2;
-		for(int i = 1; i < points.size(); i++)
+		for(std::size_t i = 1; i < points.size(); i++)
 		{
 			intersectionDescription current = points[i-1];
 			intersectionDescription next = points[i];

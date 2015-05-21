@@ -19,7 +19,7 @@ namespace geometry
 			:input1(other.input1), input2(other.input2), indices(other.indices), n(other.n), size(other.size), isDone(other.isDone)
 		{};
 		zipIterator(const std::vector<T>& input1, const std::vector<U>& input2, std::size_t n)
-			:input1(input1), input2(input2), n(n), indices(n), size(input1.size() + input2.size()), isDone(false)
+			:input1(input1), input2(input2), indices(n), n(n), size(input1.size() + input2.size()), isDone(false)
 		{
 			if(size == 0)  
 			{
@@ -27,7 +27,7 @@ namespace geometry
 			}
 			else
 			{
-				for(int i = 0; i < n; i++) indices[i] = i;
+				for(int i = 0; i < (int)n; i++) indices[i] = i;
 			}
 		};
 		void extract(std::vector<T>& output1, std::vector<U>& output2) const
@@ -37,7 +37,7 @@ namespace geometry
 #endif
 			output1.clear();
 			output2.clear();
-			for(int i = 0; i < n; i++)
+			for(int i = 0; i < (int)n; i++)
 			{
 				if(indices[i] >= input1.size())
 				{
@@ -92,7 +92,7 @@ namespace geometry
 	{
 	public:
 		allSubsetsIterator(const std::vector<T>& input1, const std::vector<U>& input2)
-			:input1(input1), input2(input2), iterator(input1, input2, 1), n(1), size(input1.size() + input2.size()), isDone(false)
+			: isDone(false), iterator(input1, input2, 1), n(1), size(input1.size() + input2.size()), input1(input1), input2(input2)
 		{
 			if(size == 0) isDone = true;
 		}

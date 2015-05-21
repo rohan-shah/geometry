@@ -9,7 +9,7 @@ namespace geometry
 		intersectionsOneCircle(circle, boundingLines, result);
 
 		cml::vector2f internalPoint(0,0);
-		for(int i = 0; i < result.size(); i++)
+		for(std::size_t i = 0; i < result.size(); i++)
 		{
 			internalPoint += result[i].point;
 		}
@@ -26,7 +26,6 @@ namespace geometry
 			float meanAngle = (initialAngle + finalAngle)/2;
 			cml::vector2f between[2] = {cml::vector2f(cos(meanAngle), sin(meanAngle))*radius + centre,  -cml::vector2f(cos(meanAngle), sin(meanAngle))*radius + centre};
 
-			bool keep = true;
 			for(int j = 0; j < 2; j++)
 			{
 				bool keep = true;
@@ -75,7 +74,7 @@ notContainedInAll:
 		}
 		//get out an internal point, and use this to order the intersections points by angle relative to a fixed internal point. 
 		cml::vector2f internalPoint(0,0);
-		for(int i = 0; i < result.size(); i++)
+		for(std::size_t i = 0; i < result.size(); i++)
 		{
 			internalPoint += result[i].point;
 		}
@@ -109,7 +108,6 @@ notContainedInAll:
 				float meanAngle = (initialAngle + finalAngle)/2;
 				cml::vector2f between[2] = {cml::vector2f(cos(meanAngle), sin(meanAngle))*(*i)->radius + centre,  -cml::vector2f(cos(meanAngle), sin(meanAngle))*(*i)->radius + centre};
 
-				bool keep = true;
 				for(int j = 0; j < 2; j++)
 				{
 					bool keep = true;
@@ -138,7 +136,7 @@ notContainedInAll:
 				}
 			}
 			cml::vector2f internalPoint(0,0);
-			for(int i = 0; i < result.size(); i++)
+			for(std::size_t i = 0; i < result.size(); i++)
 			{
 				internalPoint += result[i].point;
 			}
@@ -199,7 +197,7 @@ notContainedInAll:
 			{
 				result.insert(result.end(), additional.begin(), additional.end());
 				cml::vector2f internalPoint(0,0);
-				for(int i = 0; i < result.size(); i++)
+				for(std::size_t i = 0; i < result.size(); i++)
 				{
 					internalPoint += result[i].point;
 				}

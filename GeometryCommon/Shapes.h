@@ -45,6 +45,18 @@ namespace geometry
 		Circle(element_type x, element_type y, float radius)
 			:pos(x, y), radius(radius)
 		{};
+		Circle(Circle&& other)
+			:pos(other.pos), radius(other.radius)
+		{}
+		Circle& operator=(const Circle& other)
+		{
+			pos = other.pos;
+			radius = other.radius;
+			return *this;
+		}
+		Circle(const Circle& other)
+			:pos(other.pos), radius(other.radius)
+		{}
 		Circle(vector_type centre, float radius)
 			:pos(centre), radius(radius)
 		{};
